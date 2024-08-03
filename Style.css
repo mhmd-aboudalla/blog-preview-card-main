@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+html {
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('/blog-preview-card-main/assets/fonts/Figtree-VariableFont_wght.ttf') format('ttf');
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+:root {
+    /*Color*/
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Gray500: hsl(0, 0%, 42%);
+    --Gray950: hsl(0, 0%, 7%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: 0.1s linear;
+}
+
+body {
+    background-color: var(--Yellow);
+    font-family: 'Figtree';
+    font-optical-sizing: auto;
+    font-style: normal;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 30px;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+        /*Card && Illustration*/
+.card {
+    background-color: #fff;
+    border: 1px solid var(--Gray950);
+    border-radius: 20px;
+    max-width: 375px;
+    padding: 20px;
+    box-shadow: 8px 8px 0 var(--Gray950);
+}
+
+.card .illustration {
+    width: 100%;
+    border-radius: 10px;
+}
+
+        /* Category button */
+.card .card_category {
+    color: var(--Gray950);
+    background-color: var(--Yellow);
+    font-weight: 900;
+    padding: 7px 15px;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+    /* Publishing Date */
+.card .publishing_date {
+    color: var(--Gray950);
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+    /* title & description */
+.card .title_desc h3{
+    font-weight: 900;
+    color: var(--Gray950);
+    margin: 20px 0;
+    cursor:pointer;
+}
+
+.card .title_desc h3:hover {
+    color: var(--Yellow);
+}
+
+.card .title_desc p{
+    font-weight: 500;
+    color: var(--Gray500);
+}
+
+        /* Owner */
+.owner {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 30px;
+}
+
+.owner img {
+    width: 30px;
+    display: inline-block;
+}
+
+.owner p {
+    color: var(--Gray950);
+    font-weight: 900;
+}
+
+        /* attribution */
+.attribution {
+    background-color: var(--Yellow);
+    transform: scale(0.8);
+    opacity: 0.8;
+    border: 0.1px solid var(--Gray950);
+    border-radius: 2px;
+    padding: 12px;
+}
+
+        /* desktop (1400px) */
+@media only screen and (min-width: 769px) {
+    body {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
